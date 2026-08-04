@@ -126,7 +126,7 @@ button:focus-visible {
   max-width: var(--page-max);
   margin: 40px auto 0;
   padding: 26px 22px 50px;
-  border-top: 1px dashed var(--line);
+  border-top: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,13 +134,6 @@ button:focus-visible {
   gap: 12px;
   font-size: 13px;
   color: var(--mocha);
-}
-
-.site-footer .hand {
-  font-family: var(--font-hand);
-  font-weight: 600;
-  font-size: 17px;
-  color: var(--rosewood);
 }
 
 /* ---------- reusable section label (dashed rule + eyebrow) ---------- */

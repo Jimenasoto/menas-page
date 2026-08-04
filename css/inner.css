@@ -18,18 +18,19 @@ body {
 /* ---------- page intro ---------- */
 .intro {
   padding: 46px 0 30px;
-  border-bottom: 1px dashed var(--line);
+  border-bottom: 1px solid var(--line);
   margin-bottom: 44px;
 }
 
 .eyebrow {
-  font-family: var(--font-hand);
-  font-weight: 700;
-  font-size: 22px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--rosewood);
-  display: inline-block;
-  transform: rotate(-2deg);
-  margin: 0 0 4px 2px;
+  display: block;
+  margin: 0 0 12px;
 }
 
 .intro h1 {
@@ -52,42 +53,27 @@ body {
 
 section { margin-bottom: 56px; }
 
-/* ---------- torn-top journal card ---------- */
+/* ---------- journal card ---------- */
 .card {
   background: var(--paper-2);
   border: 1px solid var(--line);
-  border-radius: 3px;
-  box-shadow: 0 10px 26px -18px var(--shadow), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  border-radius: 4px;
+  box-shadow: 0 10px 26px -18px var(--shadow);
   position: relative;
-}
-
-.torn-top { position: relative; }
-
-.torn-top::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: var(--paper);
-  clip-path: polygon(
-    0% 100%, 3% 20%, 7% 100%, 11% 30%, 15% 100%, 19% 15%, 23% 100%,
-    27% 25%, 31% 100%, 35% 10%, 39% 100%, 43% 30%, 47% 100%, 51% 20%,
-    55% 100%, 59% 15%, 63% 100%, 67% 25%, 71% 100%, 75% 10%, 79% 100%,
-    83% 30%, 87% 100%, 91% 20%, 95% 100%, 100% 15%, 100% 0%, 0% 0%
-  );
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .journal-card {
-  padding: 26px 26px 24px;
-  transform: rotate(-0.4deg);
+  padding: 28px 28px 26px;
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-.journal-card:nth-child(even) { transform: rotate(0.4deg); }
+.journal-card:hover {
+  box-shadow: 0 14px 30px -16px var(--shadow);
+  border-color: var(--blush-deep);
+}
 
 .tag {
   display: inline-block;
@@ -112,9 +98,10 @@ section { margin-bottom: 56px; }
 }
 
 .journal-card .meta {
-  font-family: var(--font-hand);
-  font-weight: 700;
-  font-size: 17px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14.5px;
   color: var(--mocha);
   opacity: 0.85;
   margin-bottom: 12px;
@@ -141,25 +128,6 @@ section { margin-bottom: 56px; }
 
 @media (max-width: 720px) {
   .journal-grid { grid-template-columns: 1fr; }
-}
-
-/* washi tape accent, sprinkle on cards as needed */
-.tape {
-  position: absolute;
-  width: 92px;
-  height: 28px;
-  top: -14px;
-  right: 34px;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(232, 180, 172, 0.85),
-    rgba(232, 180, 172, 0.85) 6px,
-    rgba(200, 155, 60, 0.55) 6px,
-    rgba(200, 155, 60, 0.55) 12px
-  );
-  opacity: 0.88;
-  transform: rotate(6deg);
-  box-shadow: 0 2px 4px rgba(58, 42, 32, 0.15);
 }
 
 /* ---------- blog category filter ---------- */
@@ -194,78 +162,39 @@ section { margin-bottom: 56px; }
   color: #fff;
 }
 
-/* ---------- polaroid ---------- */
-.polaroid {
-  background: #fffaf3;
-  padding: 12px 12px 40px;
-  box-shadow: 0 14px 28px -16px var(--shadow);
-  transform: rotate(2.4deg);
-  width: 210px;
+/* ---------- framed photo ---------- */
+.framed-photo {
+  width: 100%;
+  max-width: 260px;
 }
 
-.polaroid .photo {
+.framed-photo .photo {
   width: 100%;
   aspect-ratio: 4 / 5;
-  border-radius: 1px;
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 14px 28px -16px var(--shadow);
 }
 
-.polaroid .cap {
-  font-family: var(--font-hand);
-  font-weight: 600;
-  font-size: 17px;
-  text-align: center;
-  color: var(--mocha);
-  margin-top: 10px;
-}
-
-/* ---------- stamp / postcard ---------- */
-.postcard {
-  background: var(--paper-2);
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  padding: 24px 24px 22px;
-  display: flex;
-  gap: 22px;
-  align-items: center;
-  box-shadow: 0 10px 26px -18px var(--shadow);
-  flex-wrap: wrap;
-}
-
-.stamp {
-  flex: none;
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: conic-gradient(from 180deg, var(--rosewood), var(--mocha), var(--rosewood));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(58, 42, 32, 0.28);
-  transform: rotate(-8deg);
-}
-
-.stamp::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border-radius: 50%;
-  border: 1.5px dashed rgba(247, 236, 223, 0.65);
-}
-
-.stamp .txt {
+.framed-photo .cap {
   font-family: var(--font-display);
   font-style: italic;
-  font-weight: 600;
-  color: var(--paper);
-  font-size: 10px;
-  text-align: center;
-  line-height: 1.25;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--mocha);
+  margin-top: 12px;
 }
 
-.postcard-body h3 {
+/* ---------- map teaser panel ---------- */
+.map-teaser {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px 28px;
+}
+
+.map-teaser h3 {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 19px;
@@ -273,11 +202,11 @@ section { margin-bottom: 56px; }
   color: var(--mocha);
 }
 
-.postcard-body p {
+.map-teaser p {
   font-size: 13.5px;
   margin: 0;
   opacity: 0.82;
-  max-width: 40ch;
+  max-width: 44ch;
 }
 
 /* ---------- about page ---------- */
@@ -353,9 +282,10 @@ section { margin-bottom: 56px; }
 }
 
 .entry .meta {
-  font-family: var(--font-hand);
-  font-weight: 700;
-  font-size: 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15.5px;
   color: var(--mocha);
   margin-bottom: 24px;
 }
@@ -372,9 +302,10 @@ section { margin-bottom: 56px; }
   padding: 14px 18px;
   background: var(--paper);
   border-left: 3px solid var(--rosewood);
-  font-family: var(--font-hand);
-  font-weight: 600;
-  font-size: 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
   color: var(--mocha);
 }
 
@@ -460,25 +391,55 @@ section { margin-bottom: 56px; }
 }
 
 .spot-card .order {
-  font-family: var(--font-hand);
-  font-weight: 600;
-  font-size: 14px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
   color: var(--mocha);
   margin-top: 6px;
 }
 
 #map {
   height: 560px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid var(--line);
   box-shadow: 0 10px 26px -18px var(--shadow);
+  overflow: hidden;
+}
+
+#map .leaflet-tile-pane {
+  filter: sepia(0.12) saturate(0.9) hue-rotate(-4deg);
+}
+
+#map .leaflet-control-zoom {
+  border: 1px solid var(--line) !important;
+  box-shadow: 0 6px 16px -10px var(--shadow) !important;
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+
+#map .leaflet-control-zoom a {
+  background: var(--cream) !important;
+  color: var(--mocha) !important;
+  font-family: var(--font-body);
+}
+
+#map .leaflet-control-zoom a:hover {
+  background: var(--paper-2) !important;
+}
+
+#map .leaflet-control-attribution {
+  background: rgba(251, 241, 226, 0.85) !important;
+  color: var(--mocha);
+  font-size: 10.5px;
 }
 
 .leaflet-popup-content-wrapper {
   background: var(--paper-2);
   color: var(--espresso);
-  border-radius: 4px;
+  border-radius: 6px;
   font-family: var(--font-body);
+  box-shadow: 0 12px 26px -14px var(--shadow);
 }
 
 .leaflet-popup-tip {

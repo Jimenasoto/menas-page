@@ -33,7 +33,7 @@ const CATEGORIES = ["life", "school", "travel", "cafe log"];
     grid.innerHTML = sorted
       .map(
         (post) => `
-        <a class="card journal-card torn-top" href="blog/${post.slug}.html">
+        <a class="card journal-card" href="blog/${post.slug}.html">
           <span class="tag">${post.tag}</span>
           <h2>${post.title}</h2>
           <div class="meta">${dateFmt(post.date)}</div>

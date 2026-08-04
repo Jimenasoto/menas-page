@@ -1,8 +1,8 @@
 /*
   Design tokens — the whole site's palette and rhythm live here.
   Change a value once, it updates everywhere. This is a deliberately
-  single-theme (warm paper) look, like a physical scrapbook — it doesn't
-  try to invert into a dark mode.
+  single-theme (warm paper, editorial) look — it doesn't try to invert
+  into a dark mode.
 */
 
 :root {
@@ -25,7 +25,6 @@
   /* type */
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Work Sans", system-ui, -apple-system, sans-serif;
-  --font-hand: "Caveat", cursive;
 
   /* rhythm */
   --radius: 6px;

@@ -8,18 +8,19 @@
   if (!listEl || !mapEl || typeof L === "undefined") return;
 
   const map = L.map("map", { scrollWheelZoom: false });
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors",
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+    attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
+    subdomains: "abcd",
     maxZoom: 19,
   }).addTo(map);
 
   const pinIcon = L.divIcon({
     className: "",
     html:
-      '<div style="width:18px;height:18px;border-radius:50% 50% 50% 0;background:#a9645a;border:2px solid #fbf1e2;transform:rotate(-45deg);box-shadow:0 2px 5px rgba(58,42,32,0.4);"></div>',
-    iconSize: [18, 18],
-    iconAnchor: [9, 18],
-    popupAnchor: [0, -18],
+      '<div style="width:14px;height:14px;border-radius:50%;background:#a9645a;border:2.5px solid #fbf1e2;box-shadow:0 2px 6px rgba(58,42,32,0.35);"></div>',
+    iconSize: [14, 14],
+    iconAnchor: [7, 7],
+    popupAnchor: [0, -10],
   });
 
   const markers = {};

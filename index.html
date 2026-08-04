@@ -28,43 +28,28 @@
 
     <!-- hero -->
     <header class="hero">
-      <span class="star s1">&#10022;</span>
-      <span class="star s2">&#10022;</span>
-      <span class="star s3">&#10022;</span>
-      <div class="kicker">
-        <span>H</span><span>E</span><span>L</span><span>L</span><span>O</span>
-      </div>
       <div class="hero-grid">
-        <div>
-          <h1>jimena<span class="last">soto.</span></h1>
-          <div class="stat-pills" id="stat-pills">
-            <div class="stat-pill"><span class="n">&mdash;</span><span class="l">blog posts</span></div>
-            <div class="stat-pill"><span class="n">&mdash;</span><span class="l">cities explored</span></div>
-            <div class="stat-pill"><span class="n">&mdash;</span><span class="l">cafes logged</span></div>
-          </div>
+        <div class="hero-copy">
+          <p class="eyebrow">computer engineering &middot; UIC</p>
+          <h1>Jimena Soto</h1>
+          <p class="hero-sub">Notes on school, two summers in Seattle, the travel that followed, and the cafes along the way.</p>
         </div>
-        <div class="cutout">
-          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="illustrated coffee mug">
-            <ellipse cx="100" cy="200" rx="70" ry="10" fill="rgba(58,42,32,0.15)"/>
-            <path d="M40 70 h100 v90 a50 50 0 0 1 -100 0 Z" fill="#fbf1e2" stroke="#3a2a20" stroke-width="3"/>
-            <path d="M140 95 q34 0 34 30 q0 30 -34 30" fill="none" stroke="#3a2a20" stroke-width="6"/>
-            <path d="M55 45 q10 -25 25 -5 q10 -25 25 0 q10 -22 22 2" fill="none" stroke="#a9645a" stroke-width="6" stroke-linecap="round"/>
-          </svg>
-          <div class="halftone" style="border-radius:8px;"></div>
+        <div class="portrait">
+          <img src="images/jimena-portrait-cutout.png" alt="Jimena, smiling, with an iced coffee" />
         </div>
       </div>
     </header>
 
     <!-- the short version -->
-    <section class="dark-block">
-      <h2>the short version</h2>
-      <div class="timeline">
-        <div class="pt"><div class="dot"></div><div class="lbl">UIC</div><div class="sub">computer engineering</div></div>
-        <div class="pt"><div class="dot"></div><div class="lbl">Seattle, summer one</div><div class="sub">first internship</div></div>
-        <div class="pt"><div class="dot"></div><div class="lbl">Seattle, summer two</div><div class="sub">back by popular demand</div></div>
-        <div class="pt now"><div class="dot"></div><div class="lbl">right now</div><div class="sub">back on campus &hearts;</div></div>
+    <section class="bio-block">
+      <p class="bio-block-label">the short version</p>
+      <p class="pull-quote">Turns out you can debug a build and track down good coffee in the same afternoon.</p>
+      <div class="milestones">
+        <div class="milestone"><span class="m-label">UIC</span><span class="m-sub">computer engineering</span></div>
+        <div class="milestone"><span class="m-label">Seattle</span><span class="m-sub">first internship</span></div>
+        <div class="milestone"><span class="m-label">Seattle, again</span><span class="m-sub">back by popular demand</span></div>
+        <div class="milestone"><span class="m-label">Right now</span><span class="m-sub">back on campus</span></div>
       </div>
-      <p class="quote">&ldquo;turns out you can debug code and track down good coffee in the same afternoon.&rdquo;</p>
     </section>
 
     <!-- nav teaser -->
@@ -87,14 +72,14 @@
         <a href="map.html">
           <span class="num">03</span>
           <h3>Cafe Map</h3>
-          <p>The fun side project &mdash; every cafe from the blog, pinned.</p>
+          <p>A side project &mdash; every cafe from the blog, pinned.</p>
         </a>
       </div>
     </section>
 
     <!-- recent posts -->
-    <section class="collage-block">
-      <h2>recent posts</h2>
+    <section class="recent-block">
+      <p class="section-label">recent posts</p>
       <div class="snap-row" id="snap-row">
         <!-- filled by js/home.js -->
       </div>
@@ -102,22 +87,19 @@
 
     <!-- cta -->
     <section class="cta">
-      <div class="cta-stamp"><span>visited<br />&amp; loved</span></div>
       <div>
-        <h2>oh, and the coffee map.</h2>
-        <p>A side project pinning every cafe mentioned in the blog &mdash; because I couldn't help myself.</p>
+        <h2>Every cafe, pinned.</h2>
+        <p>A side project mapping every spot mentioned in the blog.</p>
       </div>
-      <a class="cta-btn" href="map.html">check it out &rarr;</a>
+      <a class="cta-btn" href="map.html">View the map &rarr;</a>
     </section>
 
   </div>
 
   <footer class="site-footer">
-    <span>&copy; <span id="year"></span> jimena soto</span>
-    <span class="hand">made with a lot of coffee &hearts;</span>
+    <span>Jimena Soto <span id="year"></span></span>
   </footer>
 
-  <script src="js/cafes.js"></script>
   <script src="js/posts.js"></script>
   <script src="js/home.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
