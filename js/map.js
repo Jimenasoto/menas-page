@@ -1,6 +1,6 @@
 // Renders the Leaflet map + sidebar list from js/cafes.js.
 // Supports map.html?spot=SLUG to open straight to one pin (used by
-// the "see this spot on the map" links in journal entries).
+// the "see this spot on the map" links in blog entries).
 
 (function () {
   const listEl = document.getElementById("spot-list");
@@ -32,7 +32,7 @@
       <div class="map-popup">
         <p class="name">${cafe.name}</p>
         <p class="note">${cafe.note}</p>
-        ${cafe.postSlug ? `<a href="journal/${cafe.postSlug}.html">read the entry &rarr;</a>` : ""}
+        ${cafe.postSlug ? `<a href="blog/${cafe.postSlug}.html">read the entry &rarr;</a>` : ""}
       </div>
     `;
 

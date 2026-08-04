@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journal &mdash; jimena grounds</title>
-  <meta name="description" content="Every cafe write-up, newest first." />
+  <title>Blog &mdash; jimena soto</title>
+  <meta name="description" content="Life, school, travel, and the occasional cafe review, newest first." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/fonts.css" />
@@ -15,11 +15,11 @@
   <div class="grain"></div>
 
   <nav class="site-nav">
-    <a class="brand" href="index.html">jimena<span>&nbsp;grounds</span></a>
+    <a class="brand" href="index.html">jimena<span>&nbsp;soto</span></a>
     <ul>
       <li><a class="nav-link" href="index.html">home</a></li>
       <li><a class="nav-link" href="about.html">about</a></li>
-      <li><a class="nav-link active" href="journal.html">journal</a></li>
+      <li><a class="nav-link active" href="blog.html">blog</a></li>
       <li><a class="nav-link" href="map.html">cafe map</a></li>
     </ul>
   </nav>
@@ -28,27 +28,30 @@
 
     <div class="intro">
       <span class="eyebrow">the notebook, digitized &mdash;</span>
-      <h1>every cafe write-up, in one place.</h1>
-      <p>The vibe, the order, and whether the window seat was worth waiting for. Each entry also drops a pin on the <a href="map.html" style="color:var(--rosewood); font-weight:600;">cafe map</a>.</p>
+      <h1>everything, in one place.</h1>
+      <p>School, Seattle, travel, whatever's on my mind &mdash; and yes, the occasional cafe review. Cafe entries also drop a pin on the <a href="map.html" style="color:var(--rosewood); font-weight:600;">cafe map</a>.</p>
     </div>
 
     <section>
-      <p class="section-label">all entries</p>
-      <div class="journal-grid card-list" id="journal-grid">
-        <!-- filled by js/journal.js -->
+      <p class="section-label">filter by</p>
+      <div class="filter-row" id="filter-row">
+        <!-- filled by js/blog.js -->
+      </div>
+      <div class="blog-grid card-list" id="blog-grid">
+        <!-- filled by js/blog.js -->
       </div>
     </section>
 
   </div>
 
   <footer class="site-footer">
-    <span>&copy; <span id="year"></span> jimena grounds</span>
+    <span>&copy; <span id="year"></span> jimena soto</span>
     <span class="hand">made with a lot of coffee &hearts;</span>
   </footer>
 
   <script src="js/cafes.js"></script>
   <script src="js/posts.js"></script>
-  <script src="js/journal.js"></script>
+  <script src="js/blog.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

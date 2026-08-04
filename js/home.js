@@ -1,13 +1,13 @@
-// Populates the homepage stat pills and "recent snapshots" from
+// Populates the homepage stat pills and "recent posts" from
 // js/cafes.js and js/posts.js, so both stay accurate as you add entries.
 
 (function () {
   const pills = document.querySelectorAll("#stat-pills .stat-pill .n");
   if (pills.length === 3) {
     const cities = new Set(cafes.map((c) => c.city));
-    pills[0].textContent = cafes.length;
-    pills[1].textContent = posts.length;
-    pills[2].textContent = cities.size;
+    pills[0].textContent = posts.length;
+    pills[1].textContent = cities.size;
+    pills[2].textContent = cafes.length;
   }
 
   const snapRow = document.getElementById("snap-row");
@@ -18,14 +18,14 @@
 
     if (recent.length === 0) {
       snapRow.innerHTML =
-        '<p class="empty">no entries yet &mdash; write your first one in /journal &hearts;</p>';
+        '<p class="empty">no entries yet &mdash; write your first one in /blog &hearts;</p>';
       return;
     }
 
     snapRow.innerHTML = recent
       .map(
         (post) => `
-        <a class="snap" href="journal/${post.slug}.html">
+        <a class="snap" href="blog/${post.slug}.html">
           <div class="ph" style="background:${post.tone}">
             <div class="halftone"></div>
           </div>

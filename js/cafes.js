@@ -1,12 +1,12 @@
 /*
   Every cafe/food spot you've visited, in one place.
   This same list feeds the map pins AND (via postSlug) links back to
-  the matching journal entry.
+  the matching blog entry.
 
   To add a new spot: copy an object below, give it a unique "slug",
   fill in the real lat/lng (right-click the spot on Google Maps ->
   the coordinates are the first thing in the menu that pops up),
-  and set "postSlug" to a journal entry's file name (without .html)
+  and set "postSlug" to a blog entry's file name (without .html)
   if you've written one, or leave it as null.
 
   tone: a CSS gradient used as a placeholder "photo" until you swap

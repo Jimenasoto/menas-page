@@ -1,11 +1,14 @@
 <!--
-  HOW TO WRITE A NEW JOURNAL ENTRY
+  HOW TO WRITE A NEW BLOG POST
   1. Duplicate this file, rename it to something-like-this.html (the "slug").
-  2. Fill in the title, meta line, cover color/photo, and body paragraphs below.
+  2. Fill in the tag, title, meta line, cover color/photo, and body below.
+     Tag should be one of: life, school, travel, cafe log (or add a new
+     one to CATEGORIES in js/blog.js if you want another category).
   3. Add a matching entry to js/posts.js with the SAME slug so it shows up
-     on the homepage and journal.html.
-  4. If this spot isn't on the map yet, add it to js/cafes.js too, and set
-     this entry's "see the map" link to map.html?spot=THAT-CAFE-SLUG.
+     on the homepage and blog.html.
+  4. Only if this is a cafe post: add the spot to js/cafes.js too, and set
+     the "see the map" link below to map.html?spot=THAT-CAFE-SLUG. If it's
+     not a cafe post, just delete the .order-note and .see-map lines.
   5. Delete this comment block before publishing (optional, but tidy).
 -->
 <!DOCTYPE html>
@@ -13,7 +16,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entry Title Here &mdash; jimena grounds</title>
+  <title>Entry Title Here &mdash; jimena soto</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="../css/tokens.css" />
   <link rel="stylesheet" href="../css/fonts.css" />
@@ -24,36 +27,38 @@
   <div class="grain"></div>
 
   <nav class="site-nav">
-    <a class="brand" href="../index.html">jimena<span>&nbsp;grounds</span></a>
+    <a class="brand" href="../index.html">jimena<span>&nbsp;soto</span></a>
     <ul>
       <li><a class="nav-link" href="../index.html">home</a></li>
       <li><a class="nav-link" href="../about.html">about</a></li>
-      <li><a class="nav-link active" href="../journal.html">journal</a></li>
+      <li><a class="nav-link active" href="../blog.html">blog</a></li>
       <li><a class="nav-link" href="../map.html">cafe map</a></li>
     </ul>
   </nav>
 
   <div class="page" style="max-width: 760px;">
 
-    <a class="back-link" href="../journal.html">&larr; back to the journal</a>
+    <a class="back-link" href="../blog.html">&larr; back to the blog</a>
 
     <article class="entry">
-      <span class="tag">cafe log</span>
+      <span class="tag">[life / school / travel / cafe log]</span>
       <!-- swap this gradient for a real photo: <img src="../images/your-photo.jpg" alt="..."> inside .cover -->
       <div class="cover" style="background: linear-gradient(160deg, #d8a892, #6b4433);"></div>
 
       <h1>Entry Title Here</h1>
-      <div class="meta">visited on [date/day] &middot; [Cafe Name], [City]</div>
+      <div class="meta">[date/day] &middot; [context: where you were, what this is about]</div>
 
       <div class="body">
-        <p>First paragraph &mdash; how you found the place and the first impression.</p>
+        <p>First paragraph &mdash; how this came about, or the first impression.</p>
 
         <p>Second paragraph &mdash; the details worth keeping.</p>
 
+        <!-- cafe posts only, delete otherwise -->
         <div class="order-note">what i got: [your order] &mdash; would / wouldn't order again</div>
 
-        <p>Closing thought &mdash; would you go back?</p>
+        <p>Closing thought.</p>
 
+        <!-- cafe posts only, delete otherwise -->
         <a class="see-map" href="../map.html?spot=CAFE-SLUG-HERE">see this spot on the map &rarr;</a>
       </div>
     </article>
@@ -61,7 +66,7 @@
   </div>
 
   <footer class="site-footer">
-    <span>&copy; <span id="year"></span> jimena grounds</span>
+    <span>&copy; <span id="year"></span> jimena soto</span>
     <span class="hand">made with a lot of coffee &hearts;</span>
   </footer>
 
