@@ -17,6 +17,7 @@ const posts = [
     excerpt:
       "What it's actually been like interning in Seattle twice as a computer engineering student — and how the travel bug started here.",
     cafeSlug: null,
+    image: "images/matcha-latte-duo.jpg",
     tone: "linear-gradient(160deg, #cf8f88, #6b4433)",
   },
   {
@@ -27,6 +28,7 @@ const posts = [
     excerpt:
       "A little spot two blocks from the studio — worth it for the ceramic cups alone. The order I'd get again, and where to sit.",
     cafeSlug: "the-corner-table",
+    image: "images/patio-lattes.jpg",
     tone: "linear-gradient(160deg, #e8b9b0, #a9645a)",
   },
 ];

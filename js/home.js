@@ -23,16 +23,19 @@
     }
 
     snapRow.innerHTML = recent
-      .map(
-        (post) => `
+      .map((post) => {
+        const bg = post.image
+          ? `background-image:url('${post.image}'); background-size:cover; background-position:center;`
+          : `background:${post.tone};`;
+        return `
         <a class="snap" href="blog/${post.slug}.html">
-          <div class="ph" style="background:${post.tone}">
+          <div class="ph" style="${bg}">
             <div class="halftone"></div>
           </div>
           <div class="cap">${post.title.length > 28 ? post.title.slice(0, 28) + "…" : post.title}</div>
         </a>
-      `
-      )
+      `;
+      })
       .join("");
   }
 })();
