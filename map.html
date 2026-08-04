@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Map &mdash; jimena grounds</title>
+  <meta name="description" content="Every cafe from the journal, pinned on a map." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">jimena<span>&nbsp;grounds</span></a>
+    <ul>
+      <li><a class="nav-link" href="index.html">home</a></li>
+      <li><a class="nav-link" href="about.html">about</a></li>
+      <li><a class="nav-link" href="journal.html">journal</a></li>
+      <li><a class="nav-link active" href="map.html">cafe map</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+
+    <div class="intro">
+      <span class="eyebrow">every pin, a visit &mdash;</span>
+      <h1>the cafe map.</h1>
+      <p>Every spot from the journal, in one place. Click a card or a pin to see the note &mdash; and follow through to the full write-up when there is one.</p>
+    </div>
+
+    <section>
+      <div class="map-layout">
+        <div class="spot-list" id="spot-list">
+          <!-- filled by js/map.js -->
+        </div>
+        <div id="map"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> jimena grounds</span>
+    <span class="hand">made with a lot of coffee &hearts;</span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/cafes.js"></script>
+  <script src="js/map.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

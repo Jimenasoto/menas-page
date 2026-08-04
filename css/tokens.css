@@ -1,0 +1,34 @@
+/*
+  Design tokens — the whole site's palette and rhythm live here.
+  Change a value once, it updates everywhere. This is a deliberately
+  single-theme (warm paper) look, like a physical scrapbook — it doesn't
+  try to invert into a dark mode.
+*/
+
+:root {
+  /* palette */
+  --paper: #f7ecdf;
+  --paper-2: #f0e2d0;
+  --cream: #fbf1e2;
+  --blush: #e3aca3;
+  --blush-2: #e8b9b0;
+  --blush-deep: #cf8f88;
+  --rosewood: #a9645a;
+  --mocha: #6b4433;
+  --espresso: #3a2a20;
+  --espresso-2: #2c2019;
+  --honey: #c89b3c;
+
+  --line: rgba(58, 42, 32, 0.16);
+  --shadow: rgba(58, 42, 32, 0.24);
+
+  /* type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", system-ui, -apple-system, sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  /* rhythm */
+  --radius: 6px;
+  --page-max: 1080px;
+  --gap: 22px;
+}

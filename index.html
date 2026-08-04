@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jimena grounds</title>
+  <meta name="description" content="A cafe journal — spots visited, orders worth repeating, and a map of everywhere worth going back to." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body class="home">
+  <div class="grain"></div>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">jimena<span>&nbsp;grounds</span></a>
+    <ul>
+      <li><a class="nav-link active" href="index.html">home</a></li>
+      <li><a class="nav-link" href="about.html">about</a></li>
+      <li><a class="nav-link" href="journal.html">journal</a></li>
+      <li><a class="nav-link" href="map.html">cafe map</a></li>
+    </ul>
+  </nav>
+
+  <div class="stack">
+
+    <!-- hero -->
+    <header class="hero">
+      <span class="star s1">&#10022;</span>
+      <span class="star s2">&#10022;</span>
+      <span class="star s3">&#10022;</span>
+      <div class="kicker">
+        <span>Y</span><span>O</span><span>U</span><span>R</span>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <h1>jimena<span class="last">grounds.</span></h1>
+          <div class="stat-pills" id="stat-pills">
+            <div class="stat-pill"><span class="n">&mdash;</span><span class="l">cafes logged</span></div>
+            <div class="stat-pill"><span class="n">&mdash;</span><span class="l">journal entries</span></div>
+            <div class="stat-pill"><span class="n">&mdash;</span><span class="l">cities explored</span></div>
+          </div>
+        </div>
+        <div class="cutout">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="illustrated coffee mug">
+            <ellipse cx="100" cy="200" rx="70" ry="10" fill="rgba(58,42,32,0.15)"/>
+            <path d="M40 70 h100 v90 a50 50 0 0 1 -100 0 Z" fill="#fbf1e2" stroke="#3a2a20" stroke-width="3"/>
+            <path d="M140 95 q34 0 34 30 q0 30 -34 30" fill="none" stroke="#3a2a20" stroke-width="6"/>
+            <path d="M55 45 q10 -25 25 -5 q10 -25 25 0 q10 -22 22 2" fill="none" stroke="#a9645a" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div class="halftone" style="border-radius:8px;"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- why this journal exists -->
+    <section class="dark-block">
+      <h2>why i started keeping a cafe journal</h2>
+      <div class="timeline">
+        <div class="pt"><div class="dot"></div><div class="lbl">the first cup</div><div class="sub">just for me</div></div>
+        <div class="pt"><div class="dot"></div><div class="lbl">the notebook fills up</div><div class="sub">might as well share it</div></div>
+        <div class="pt"><div class="dot"></div><div class="lbl">the map begins</div><div class="sub">pinning every spot</div></div>
+        <div class="pt now"><div class="dot"></div><div class="lbl">right now</div><div class="sub">welcome in &hearts;</div></div>
+      </div>
+      <p class="quote">&ldquo;the best part of a new city is finding where the locals actually drink their coffee.&rdquo;</p>
+    </section>
+
+    <!-- nav teaser -->
+    <section class="three-col">
+      <div class="col">
+        <a href="about.html">
+          <span class="num">01</span>
+          <h3>About Me</h3>
+          <p>Who's behind the notebook &mdash; plus the running list of cafe must-orders.</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="journal.html">
+          <span class="num">02</span>
+          <h3>The Journal</h3>
+          <p>Full write-ups: the vibe, the order, and whether the window seat was worth it.</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="map.html">
+          <span class="num">03</span>
+          <h3>Cafe Map</h3>
+          <p>Every entry pinned &mdash; a real, growing map of everywhere worth going back to.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- recent posts -->
+    <section class="collage-block">
+      <h2>recent snapshots</h2>
+      <div class="snap-row" id="snap-row">
+        <!-- filled by js/home.js -->
+      </div>
+    </section>
+
+    <!-- cta -->
+    <section class="cta">
+      <div class="cta-stamp"><span>visited<br />&amp; loved</span></div>
+      <div>
+        <h2>see it all pinned.</h2>
+        <p>Open the full interactive map of every cafe and spot from the journal.</p>
+      </div>
+      <a class="cta-btn" href="map.html">view the map &rarr;</a>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> jimena grounds</span>
+    <span class="hand">made with a lot of coffee &hearts;</span>
+  </footer>
+
+  <script src="js/cafes.js"></script>
+  <script src="js/posts.js"></script>
+  <script src="js/home.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
