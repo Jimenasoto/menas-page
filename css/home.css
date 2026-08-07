@@ -25,16 +25,6 @@ body.home {
   gap: 48px;
 }
 
-.hero-copy .eyebrow {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 12.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--rosewood);
-  margin: 0 0 18px;
-}
-
 .script-name {
   margin: 0;
   display: flex;
@@ -87,78 +77,6 @@ body.home {
   .portrait { order: -1; max-width: 260px; margin: 0 auto; }
 }
 
-/* ---------- bio / short version panel ---------- */
-.bio-block {
-  background: var(--espresso-2);
-  color: var(--cream);
-  border-radius: var(--radius);
-  padding: 48px 48px 40px;
-}
-
-.bio-block-label {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--blush-2);
-  margin: 0 0 22px;
-}
-
-.pull-quote {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(22px, 3vw, 30px);
-  line-height: 1.4;
-  color: var(--cream);
-  max-width: 34ch;
-  margin: 0 0 40px;
-  text-wrap: balance;
-}
-
-.milestones {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  border-top: 1px solid rgba(251, 241, 226, 0.16);
-  padding-top: 24px;
-}
-
-.milestone {
-  flex: 1;
-  min-width: 140px;
-  padding: 0 24px;
-  border-left: 1px solid rgba(251, 241, 226, 0.16);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.milestone:first-child {
-  padding-left: 0;
-  border-left: none;
-}
-
-.milestone .m-label {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 17px;
-  color: var(--cream);
-}
-
-.milestone .m-sub {
-  font-size: 12.5px;
-  letter-spacing: 0.03em;
-  color: var(--blush-2);
-  opacity: 0.85;
-}
-
-@media (max-width: 720px) {
-  .bio-block { padding: 36px 26px; }
-  .milestones { flex-direction: column; gap: 18px; }
-  .milestone { border-left: none; padding-left: 0; }
-}
 
 /* ---------- 3-col nav teaser ---------- */
 .three-col {
