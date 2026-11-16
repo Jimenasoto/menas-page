@@ -340,6 +340,28 @@ section { margin-bottom: 56px; }
 
 .entry .body p a:hover { text-decoration-color: var(--rosewood); }
 
+@media (max-width: 520px) {
+  .entry { padding: 26px 20px 30px; }
+}
+
+/* small "see this on insta" link at the end of a post */
+.entry .insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mocha);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.entry .insta-link:hover {
+  color: var(--rosewood);
+  opacity: 1;
+}
+
 .entry .cover {
   width: 100%;
   aspect-ratio: 16 / 8;
@@ -390,7 +412,7 @@ section { margin-bottom: 56px; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 10px;
+  margin: 10px 10px 0 0;
   font-size: 13.5px;
   font-weight: 600;
   color: var(--rosewood);
