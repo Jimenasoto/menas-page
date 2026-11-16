@@ -10,7 +10,7 @@
 
     if (recent.length === 0) {
       snapRow.innerHTML =
-        '<p class="empty">Nothing here yet &mdash; write the first entry in /blog.</p>';
+        '<p class="empty">No posts yet.</p>';
       return;
     }
 

@@ -1,4 +1,4 @@
-/* Shared by about.html, journal.html, journal/*.html and map.html —
+/* Shared by about.html, journal.html, journal/*.html and map.html , 
    the calmer, warm-paper side of the site. */
 
 body {
@@ -228,30 +228,6 @@ section { margin-bottom: 56px; }
   opacity: 0.9;
 }
 
-.fact-list {
-  list-style: none;
-  margin: 24px 0 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.fact-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 10px 14px;
-  background: var(--paper-2);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  font-size: 13.5px;
-}
-
-.fact-list .k {
-  font-weight: 600;
-  color: var(--mocha);
-}
-
 /* ---------- journal single entry ---------- */
 .entry {
   background: var(--paper-2);
@@ -262,6 +238,41 @@ section { margin-bottom: 56px; }
 }
 
 .entry .tag { margin-bottom: 16px; }
+
+/* photo rows inside a post: natural proportions, never cropped */
+.entry .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 8px 0 28px;
+  align-items: start;
+}
+
+.entry .photo-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 10px 22px -16px var(--shadow);
+}
+
+.entry .photo-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 520px) {
+  .entry .photo-grid,
+  .entry .photo-grid.three { grid-template-columns: 1fr; }
+}
+
+.entry .body p a {
+  color: var(--rosewood);
+  text-decoration: underline;
+  text-decoration-color: var(--blush-deep);
+  text-underline-offset: 3px;
+}
+
+.entry .body p a:hover { text-decoration-color: var(--rosewood); }
 
 .entry .cover {
   width: 100%;
@@ -408,7 +419,7 @@ section { margin-bottom: 56px; }
 }
 
 #map .leaflet-tile-pane {
-  filter: sepia(0.12) saturate(0.9) hue-rotate(-4deg);
+  filter: sepia(0.35) saturate(0.55) contrast(0.96) brightness(1.03);
 }
 
 #map .leaflet-control-zoom {
@@ -460,7 +471,7 @@ section { margin-bottom: 56px; }
   opacity: 0.85;
 }
 
-.map-popup a {
+.leaflet-container .map-popup a {
   font-size: 12px;
   font-weight: 600;
   color: var(--rosewood);

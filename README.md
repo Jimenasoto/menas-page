@@ -1,6 +1,6 @@
 # jimena soto
 
-A personal site &mdash; About Me, a general Blog (life, school, travel, and
+A personal site, About Me, a general Blog (life, school, travel, and
 everything else), and a Cafe Map as a fun side feature. Plain HTML/CSS/JS,
 no build tools, no framework required.
 
@@ -11,13 +11,12 @@ jimena-grounds/
 ├── index.html          the homepage (bold, collage-style)
 ├── about.html           about you
 ├── blog.html             every post, with category filters (calmer style)
-├── map.html               interactive cafe map (Leaflet.js) — the side project
+├── map.html               interactive cafe map (Leaflet.js), the side project
 ├── blog/
 │   ├── _template.html     duplicate this to write a new post
-│   ├── two-summers-in-seattle.html   example post (tag: life)
-│   └── rainy-tuesday-window-seat.html   example post (tag: cafe log)
+│   └── ...one .html file per post (e.g. bueno-days-little-village.html)
 ├── css/
-│   ├── tokens.css        the palette + type variables — change once, updates everywhere
+│   ├── tokens.css        the palette + type variables, change once, updates everywhere
 │   ├── fonts.css          self-hosted font declarations
 │   ├── base.css            shared nav, footer, resets
 │   ├── home.css             homepage-only styles
@@ -42,7 +41,7 @@ jimena-grounds/
    auto-refreshes every time you save a file.
 
 You can also just double-click `index.html` in Finder to preview it without
-a server &mdash; everything works over `file://` too, including the map.
+a server, everything works over `file://` too, including the map.
 
 ## How to add a new blog post
 
@@ -50,17 +49,17 @@ a server &mdash; everything works over `file://` too, including the map.
    `blog/my-new-post.html`.
 2. Fill in the tag, title, date, photo, and body text (the file has inline
    instructions as a comment at the top). Tag should be one of `life`,
-   `school`, `travel`, `cafe log` &mdash; or add a new category by editing the
+   `school`, `travel`, `cafe log`, or add a new category by editing the
    `CATEGORIES` list at the top of `js/blog.js`.
 3. Add a matching object to `js/posts.js` with the same `slug` (the
    filename, minus `.html`).
 4. Only if it's a cafe post: add the spot to `js/cafes.js` too, with real
-   latitude/longitude &mdash; right-click the spot on Google Maps and the
+   latitude/longitude, right-click the spot on Google Maps and the
    coordinates are the first entry in the menu that appears. Then set the
    post's "see the map" link to `map.html?spot=THAT-CAFE-SLUG`.
 
 The homepage stat pills, the blog list + filters, and the map pins all
-update automatically from `js/posts.js` and `js/cafes.js` &mdash; you never
+update automatically from `js/posts.js` and `js/cafes.js`, you never
 have to touch the page layout again.
 
 ## Adding real photos
@@ -92,5 +91,5 @@ Finally, in the repo on GitHub: **Settings &rarr; Pages &rarr; Source: "Deploy
 from a branch" &rarr; Branch: main / (root)**. Your site goes live at
 `https://YOUR-USERNAME.github.io/jimena-grounds/` within a minute or two.
 
-I've only set up git locally for now &mdash; the GitHub repo creation and push
+I've only set up git locally for now, the GitHub repo creation and push
 are steps to do together whenever you're ready to publish.

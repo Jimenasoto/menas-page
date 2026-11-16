@@ -136,6 +136,22 @@ button:focus-visible {
   color: var(--mocha);
 }
 
+.social-links {
+  display: flex;
+  gap: 18px;
+}
+
+.social-links a {
+  color: var(--mocha);
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.social-links a:hover {
+  opacity: 1;
+  color: var(--rosewood);
+}
+
 /* ---------- reusable section label (dashed rule + eyebrow) ---------- */
 .section-label {
   font-family: var(--font-body);

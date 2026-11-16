@@ -10,5 +10,5 @@ Where to put real photos:
 
 - Keep photos under ~500KB each if you can (resize/export at ~1600px
   wide) so pages load fast. Any free tool like Squoosh.app works.
-- Always fill in a real "alt" description — it's what screen readers
+- Always fill in a real "alt" description, it's what screen readers
   announce, and what shows if the image fails to load.

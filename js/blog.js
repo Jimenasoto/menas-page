@@ -2,7 +2,7 @@
 // category filter row built from CATEGORIES below.
 //
 // To add a new category (e.g. "photography"), just add it to this
-// list and start tagging posts with it in js/posts.js — the filter
+// list and start tagging posts with it in js/posts.js. The filter
 // button shows up automatically.
 
 const CATEGORIES = ["life", "school", "travel", "cafe log"];
@@ -26,7 +26,7 @@ const CATEGORIES = ["life", "school", "travel", "cafe log"];
 
     if (sorted.length === 0) {
       grid.innerHTML =
-        '<p style="opacity:.75;">Nothing here yet &mdash; write your first entry in /blog.</p>';
+        '<p style="opacity:.75;">No posts yet.</p>';
       return;
     }
 
@@ -38,7 +38,7 @@ const CATEGORIES = ["life", "school", "travel", "cafe log"];
           <h2>${post.title}</h2>
           <div class="meta">${dateFmt(post.date)}</div>
           <p>${post.excerpt}</p>
-          <span class="read">read the entry &rarr;</span>
+          <span class="read">read the post</span>
         </a>
       `
       )

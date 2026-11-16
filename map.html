@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cafe Map &mdash; jimena soto</title>
-  <meta name="description" content="The fun side project: every cafe mentioned on the blog, pinned on a map." />
+  <title>Cafe Map | mena's page</title>
+  <meta name="description" content="A map of every cafe from the blog." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/fonts.css" />
@@ -16,7 +16,7 @@
   <div class="grain"></div>
 
   <nav class="site-nav">
-    <a class="brand" href="index.html">jimena<span>&nbsp;soto</span></a>
+    <a class="brand" href="index.html">mena's<span>&nbsp;page</span></a>
     <ul>
       <li><a class="nav-link" href="index.html">home</a></li>
       <li><a class="nav-link" href="about.html">about</a></li>
@@ -29,11 +29,14 @@
 
     <div class="intro">
       <span class="eyebrow">Cafe Map</span>
-      <h1>Every spot, pinned.</h1>
-      <p>Every cafe mentioned on the blog, in one place. Click a card or a pin to see the note &mdash; and follow through to the full write-up when there is one.</p>
+      <h1>Cafe map</h1>
+      <p>Every cafe from the blog. Click a card or a pin to see my notes and a link to the post if there is one.</p>
     </div>
 
     <section>
+      <div class="filter-row" id="city-row">
+        <!-- filled by js/map.js -->
+      </div>
       <div class="map-layout">
         <div class="spot-list" id="spot-list">
           <!-- filled by js/map.js -->
@@ -45,7 +48,11 @@
   </div>
 
   <footer class="site-footer">
-    <span>Jimena Soto <span id="year"></span></span>
+    <span>mena's page <span id="year"></span></span>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@menasotoooo" target="_blank" rel="noopener">tiktok</a>
+      <a href="https://www.instagram.com/menasips" target="_blank" rel="noopener">instagram</a>
+    </div>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
