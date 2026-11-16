@@ -7,7 +7,7 @@ no build tools, no framework required.
 ## Project structure
 
 ```
-jimena-grounds/
+menas-page/
 ├── index.html          the homepage (bold, collage-style)
 ├── about.html           about you
 ├── blog.html             every post, with category filters (calmer style)
@@ -33,7 +33,7 @@ jimena-grounds/
 
 ## Running it locally in VS Code
 
-1. Open the `jimena-grounds` folder in VS Code (File &rarr; Open Folder&hellip;).
+1. Open the `menas-page` folder in VS Code (File &rarr; Open Folder&hellip;).
 2. Install the **Live Server** extension (search it in the Extensions panel,
    the puzzle-piece icon on the left sidebar).
 3. Right-click `index.html` in the file tree &rarr; **"Open with Live Server."**
@@ -70,26 +70,12 @@ swap a placeholder gradient `<div class="cover">` for an `<img>` tag with
 
 ## Putting it online (free) with GitHub Pages
 
-Once you're happy with it:
+The repo lives at https://github.com/Jimenasoto/menas-page and the site is
+served from the `main` branch (Settings &rarr; Pages &rarr; Deploy from a
+branch &rarr; main / root) at:
 
-```bash
-cd /Users/jimenasoto/Desktop/jimena-grounds
-git add -A
-git commit -m "rebrand as a general personal site"
-```
+`https://jimenasoto.github.io/menas-page/`
 
-Then, on github.com: create a new repository (no README/gitignore needed
-since you already have files), and push:
-
-```bash
-git remote add origin https://github.com/YOUR-USERNAME/jimena-grounds.git
-git branch -M main
-git push -u origin main
-```
-
-Finally, in the repo on GitHub: **Settings &rarr; Pages &rarr; Source: "Deploy
-from a branch" &rarr; Branch: main / (root)**. Your site goes live at
-`https://YOUR-USERNAME.github.io/jimena-grounds/` within a minute or two.
-
-I've only set up git locally for now, the GitHub repo creation and push
-are steps to do together whenever you're ready to publish.
+To update the live site: edit files, then in GitHub Desktop write a short
+summary, click **Commit to main**, then **Push origin**. The site refreshes
+within a minute or two.
