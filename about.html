@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | mena's page</title>
+  <meta name="description" content="About Jimena Soto, computer engineering student at UIC." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/inner.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">mena's<span>&nbsp;page</span></a>
+    <ul>
+      <li><a class="nav-link" href="index.html">home</a></li>
+      <li><a class="nav-link active" href="about.html">about</a></li>
+      <li><a class="nav-link" href="blog.html">blog</a></li>
+      <li><a class="nav-link" href="map.html">cafe map</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+
+    <div class="intro">
+      <span class="eyebrow">About</span>
+      <h1>Hi, I'm Jimena.</h1>
+      <p>I started this site to keep my cafe notes in one place, but you might see more about me here!</p>
+    </div>
+
+    <section>
+      <p class="section-label">the short version</p>
+      <div class="about-grid">
+        <div class="bio">
+          <p>I'm a first generation latina, computer engineering student at UIC. </p>
+          <p>I spent the last two summers interning in Seattle, which is where most of the cafe posts here come from. Back in Chicago, you'll usually find me in class, or at a cafe taking photos of whatever I'm drinking and writing about it.</p>
+        </div>
+        <div class="framed-photo">
+          <div class="photo"><img src="images/three-drinks-cheers.jpg" alt="three iced drinks held up together at a cafe" style="width:100%; height:100%; object-fit:cover;" /></div>
+          <div class="cap"> Moment Cafe in Seattle with friends</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="map-teaser">
+        <h3>Cafe map</h3>
+        <p>Every cafe from the blog is on the <a href="map.html" style="color:var(--rosewood); font-weight:600;">cafe map</a>.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>mena's page <span id="year"></span></span>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@menasotoooo" target="_blank" rel="noopener">tiktok</a>
+      <a href="https://www.instagram.com/menasips" target="_blank" rel="noopener">instagram</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

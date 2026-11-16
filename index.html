@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mena's page</title>
+  <meta name="description" content="Jimena Soto, computer engineering student at UIC. I write about school, my internships in Seattle, travel, and cafes." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body class="home">
+  <div class="grain"></div>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">mena's<span>&nbsp;page</span></a>
+    <ul>
+      <li><a class="nav-link active" href="index.html">home</a></li>
+      <li><a class="nav-link" href="about.html">about</a></li>
+      <li><a class="nav-link" href="blog.html">blog</a></li>
+      <li><a class="nav-link" href="map.html">cafe map</a></li>
+    </ul>
+  </nav>
+
+  <div class="stack">
+
+    <!-- hero -->
+    <header class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="script-name">
+            <span class="n1">Jimena</span>
+            <span class="n2">Soto.</span>
+          </h1>
+        </div>
+        <div class="portrait">
+          <img src="images/jimena-hero.jpg" alt="Jimena smiling under pink blossoms, holding an iced matcha" />
+        </div>
+      </div>
+      <p class="hero-sub">My personal website, learn a little about me, my journey, and some of my passions!</p>
+    </header>
+
+    <!-- nav teaser -->
+    <section class="three-col">
+      <div class="col">
+        <a href="about.html">
+          <span class="num">01</span>
+          <h3>About Me</h3>
+          <p>Who I am, what I study, and what I've been up to.</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="blog.html">
+          <span class="num">02</span>
+          <h3>The Blog</h3>
+          <p>Posts about life, school, travel, and cafes.</p>
+        </a>
+      </div>
+      <div class="col">
+        <a href="map.html">
+          <span class="num">03</span>
+          <h3>Cafe Map</h3>
+          <p>A map of every cafe I've written about.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- recent posts -->
+    <section class="recent-block">
+      <p class="section-label">recent posts</p>
+      <div class="snap-row" id="snap-row">
+        <!-- filled by js/home.js -->
+      </div>
+    </section>
+
+    <!-- cta -->
+    <section class="cta">
+      <div>
+        <h2>Cafe map</h2>
+        <p>Every cafe from the blog, on one map.</p>
+      </div>
+      <a class="cta-btn" href="map.html">View the map</a>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>mena's page <span id="year"></span></span>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@menasotoooo" target="_blank" rel="noopener">tiktok</a>
+      <a href="https://www.instagram.com/menasips" target="_blank" rel="noopener">instagram</a>
+    </div>
+  </footer>
+
+  <script src="js/posts.js"></script>
+  <script src="js/home.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
