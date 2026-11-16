@@ -1,4 +1,4 @@
-# jimena soto
+# mena's page
 
 A personal site, About Me, a general Blog (life, school, travel, and
 everything else), and a Cafe Map as a fun side feature. Plain HTML/CSS/JS,
