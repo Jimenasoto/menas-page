@@ -186,6 +186,72 @@ section { margin-bottom: 56px; }
   margin-top: 12px;
 }
 
+/* ---------- "first post" feature on the about page ---------- */
+.first-post {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+  align-items: center;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 26px -18px var(--shadow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.first-post:hover {
+  border-color: var(--blush-deep);
+  box-shadow: 0 14px 30px -16px var(--shadow);
+}
+
+.first-post img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.first-post .tag { margin-bottom: 10px; }
+
+.first-post h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 21px;
+  margin: 0 0 6px;
+  color: var(--espresso);
+}
+
+.first-post .meta {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14.5px;
+  color: var(--mocha);
+  margin-bottom: 10px;
+}
+
+.first-post p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0 0 12px;
+  max-width: 50ch;
+}
+
+.first-post .read {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--rosewood);
+}
+
+@media (max-width: 520px) {
+  .first-post { grid-template-columns: 1fr; }
+  .first-post img { max-width: 220px; }
+}
+
 /* ---------- map teaser panel ---------- */
 .map-teaser {
   background: var(--paper-2);
